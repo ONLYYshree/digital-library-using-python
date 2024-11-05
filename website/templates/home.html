@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE LIBRARY</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style4.css')}}">
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert {{ category }}">
+        {{ message }}
+        <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %} 
+    <div class="main">
+        
+
+        <div id="page1">
+
+            <img src="https://img.freepik.com/free-vector/people-using-online-library-horizontal-isometric-concept-blue-3d_1284-31705.jpg?t=st=1728400452~exp=1728404052~hmac=64113b04bd6bd26b945cd9f5506e6a3e412ea96ab6899144860ae8de6e91e0b3&w=1380" alt="">
+
+            <div id="search-bar">
+                <input placeholder="Enter your search key...." class="search-input">
+                    <div class="search-icon">
+                        <button type="button"><i class="ri-search-line"></i>Search</button>
+                    </div>
+            </div>
+    
+    
+        </div>
+
+        <div id="page2">
+
+            <div id="boxes">
+
+                <div id="box1">
+
+                    <div id="part1">
+                        <h5 id="part1-H">
+                            <a href="{{ url_for('views.ca') }}">COMPUTER ARCHITECTURE</a>
+                        </h5>
+                        
+                    </div>
+
+                    <div id="part2">
+                        <ul>
+
+                            <li id="list">PYQ</li>
+                            <li id="list">NOTES</li>
+                            <li id="list">E-BOOK</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div id="box2">
+
+                    <div id="part1">
+                        <h5 id="part1-H">
+                            <a href="{{ url_for('views.dmgt') }}">DISCRETE MATHEMATICS AND GRAPH THEORY</a>
+                        </h5>
+                    </div>
+
+                    <div id="part2">
+                        <ul>
+
+                            <li id="list">PYQ</li>
+                            <li id="list">NOTES</li>
+                            <li id="list">E-BOOK</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div id="box3">
+
+                    <div id="part1">
+                        <h5 id="part1-H">
+                            <a href="{{ url_for('views.dsa') }}">DATA STRUCTURES AND ALGORITHM</a>
+                        </h5>
+                    </div>
+
+                    <div id="part2">
+                        <ul>
+
+                            <li id="list">PYQ</li>
+                            <li id="list">NOTES</li>
+                            <li id="list">E-BOOK</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div id="box4">
+
+                    <div id="part1">
+                        <h5 id="part1-H">
+                            <a href="{{ url_for('views.eeim') }}">ENGINEERING ECONOMICS AND INDIAN ECONOMIC</a>
+                        </h5>
+                    </div>
+
+                    <div id="part2">
+                        <ul>
+
+                            <li id="list">PYQ</li>
+                            <li id="list">NOTES</li>
+                            <li id="list">E-BOOK</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div id="box5">
+
+                    <div id="part1">
+                        <h5 id="part1-H">
+                            <a href="">OPEN ELECTIVE</a>
+                        </h5>
+                    </div>
+
+                    <div id="part2">
+                        <ul>
+
+                            <li id="list">PYQ</li>
+                            <li id="list">NOTES</li>
+                            <li id="list">E-BOOK</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div id="box6">
+
+                    <div id="part1">
+                        <h5 id="part1-H">
+                            <a href="">HUMAN ELECTIVE</a>
+                        </h5>
+                    </div>
+
+                    <div id="part2">
+                        <ul>
+
+                            <li id="list">PYQ</li>
+                            <li id="list">NOTES</li>
+                            <li id="list">E-BOOK</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    <div><a href="{{ url_for('views.helpdesk') }}" class="btn btn-helpdesk">Helpdesk</a></div>
+
+
+
+    </div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css')}}">
+        <nav class="menu-bar">
+            <ul>
+                <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                <li class="dropdown">
+                    <a href="{{ url_for('views.home') }}">2nd Year</a>
+                    <ul class="dropdown-content">
+                        <li><a href="{{ url_for('views.home') }}">3rd Sem</a></li>
+                        <li><a href="#">4th Sem</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">3rd Year</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">5th Sem</a></li>
+                        <li><a href="#">6th Sem</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('auth.login') }}">Logout</a></li>
+            </ul>
+        </nav>
+</body>
+</html>

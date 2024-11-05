@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign Up form</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}?v=1.0">
+</head>
+<body>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert {{ category }}">
+        {{ message }}
+        <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+  <div class="wrapper">
+    <h1>Sign Up</h1>
+    
+      <form action="{{ url_for('auth.signup') }}" method="POST">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="name" placeholder="Name">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="password2" placeholder="Confirm Password">
+        <button type="submit" class="btn btn-primary" >SignUp</button>
+    </form>
+    
+    <div class="member">
+      Already a member? <a href="{{ url_for('auth.login') }}">Login Here
+        
+      </a>
+    </div>
+
+  </div>
+  
+  
+</body>
+</html>

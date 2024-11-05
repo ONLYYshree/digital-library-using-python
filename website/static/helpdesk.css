@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+body {
+    background-color: black;
+}
+
+.helpdesk-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 2rem 1.5rem;
+    background-color: #faf7f7;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.helpdesk-section h2 {
+    font-size: 2rem;
+    color: #07001f;
+    margin-bottom: 1.2rem;
+}
+
+.helpdesk-section p {
+    font-size: 1rem;
+    color: #636363;
+    margin-bottom: 1.5rem;
+}
+
+.helpdesk-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.helpdesk-section input[type="text"],
+.helpdesk-section input[type="email"],
+.helpdesk-section textarea {
+    width: 92%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background: #e4e4e4;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.helpdesk-section textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.helpdesk-section input[type="text"]:focus,
+.helpdesk-section input[type="email"]:focus,
+.helpdesk-section textarea:focus {
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.btn-submit {
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    color: #fff;
+    background-color: #b74b4b;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #a43c3c;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}

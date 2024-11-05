@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpdesk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='helpdesk.css') }}">
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert {{ category }}">
+        {{ message }}
+        <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %} 
+    <section class="helpdesk-section">
+        <h2>Helpdesk</h2>
+        <p>If you have any questions or issues, please fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form action="{{ url_for('views.submit_helpdesk') }}" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="description" placeholder="Describe your issue or question" required></textarea>
+            <button type="submit" class="btn btn-submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>

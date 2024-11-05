@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='content.css')}}">
+    <title>DSA</title>
+</head>
+<body>
+
+    <h1>Computer Architecture</h1>
+    <h1>Previous year questions</h1>
+    <section>
+    <embed src="{{ url_for('static', filename='files/CA/pyq.pdf') }}" type="application/pdf" width="50%" height="400px" />
+    <a href="{{ url_for('static', filename='files/CA/pyqS.pdf') }}" download>Download PDF</a>
+    
+</section>
+
+<section>
+    <h1>Notes</h1>
+    <embed src="{{ url_for('static', filename='files/CA/unit 1.pdf') }}" type="application/pdf" width="50%" height="400px" />
+    <a href="{{ url_for('static', filename='files/CA/unit 1.pdf') }}" download>Download PDF</a>
+    <embed src="{{ url_for('static', filename='files/CA/unit 2.pdf') }}" type="application/pdf" width="50%" height="400px" />
+    <a href="{{ url_for('static', filename='files/CA/unit 2.pdf') }}" download>Download PDF</a>
+    <embed src="{{ url_for('static', filename='files/CA/unit 3.pdf') }}" type="application/pdf" width="50%" height="400px" />
+    <a href="{{ url_for('static', filename='files/CA/unit 3.pdf') }}" download>Download PDF</a>
+    <embed src="{{ url_for('static', filename='files/CA/unit 4.pdf') }}" type="application/pdf" width="50%" height="400px" />
+    <a href="{{ url_for('static', filename='files/CA/unit 4.pdf') }}" download>Download PDF</a>
+    <embed src="{{ url_for('static', filename='files/CA/unit 5.pdf') }}" type="application/pdf" width="50%" height="400px" />
+    <a href="{{ url_for('static', filename='files/CA/unit 5.pdf') }}" download>Download PDF</a>
+</section>
+
+<section>
+    <h1>E-Books</h1>
+    <embed src="{{ url_for('static', filename='files/CA/CA ebook.pdf') }}" type="application/pdf" width="50%" height="400px" />
+    <a href="{{ url_for('static', filename='files/CA/CA ebook.pdf') }}" download>Download PDF</a>
+</section>
+</body>
+</html>
+
+

@@ -1,0 +1,222 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.main {
+    width: 90%;
+    height: auto;
+}
+
+
+#page1 {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(100%);
+}
+
+#logout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#logout i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#logout a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+#logout:hover a, #logout:hover i {
+    color: #b74b4b;
+}
+
+
+
+#search-bar {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input {
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-icon button {
+    background-color: #b74b4b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon button:hover {
+    background-color: #b74b4b;
+}
+
+
+#page2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+#boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+}
+
+#boxes div {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#boxes div:hover {
+    transform: scale(1.05);
+    background-color: #444444;
+}
+
+
+#part1 {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#part1-H a {
+    color: #b74b4b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#part1-H a:hover {
+    color: #fff;
+}
+
+#part2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#part2 ul li {
+    padding: 10px;
+    color: #ccc;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+#part2 ul li:hover {
+    color: #fff;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .alert.success {
+    background-color: #4CAF50; /* Green */
+    position: fixed; /* Position it at the top of the screen */
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    z-index: 1000; /* Make sure it stays on top of other elements */
+    width: 50%; /* Set a width if needed */
+    text-align: center; /* Center text */
+  } /* Green */
+  .alert.error {background-color: #f44336;} /* Red */
+
+  .close-btn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .close-btn:hover {
+    color: black;
+  }
+  .btn-helpdesk {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn-helpdesk:hover {
+    background-color: #218838;
+    cursor: pointer;
+}
+
+
+

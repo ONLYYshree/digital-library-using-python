@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-centric digital library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css')}}">
+    <title>{% block title %}Digital Library{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">USER-CENTRIC digital library</a>
+        <nav>
+            <a href="{{ url_for('auth.signup') }}" class="btn">signup</a>
+            <a href="{{ url_for('auth.login') }}" class="btn">login</a>
+        </nav>
+        
+
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="{{ url_for('static', filename='main30.jpg') }}" width="500" alt=""> 
+        </div>
+
+        <div class="home-content">
+            <h1>Welcome to Our<span>Digital Library</span></h1>
+            <p>Discover a vast collection of eBooks,notes,and previous year question papers tailored for the 3rd semester of the AI department.</p>
+        </div>
+        
+            
+        </div>
+        {% block content %}{% endblock %}
+    </section>
+</body>
+</html>
